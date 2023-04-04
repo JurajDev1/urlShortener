@@ -70,7 +70,7 @@ public class ApiController {
             registerUrlResponse.setShortURL(LOCALHOST + shortUrl);
             return registerUrlResponse;
         } else {
-            throw new RuntimeException();
+            throw new RuntimeException("Could not authenticate user for url registration");
         }
     }
 
@@ -83,7 +83,8 @@ public class ApiController {
             }
             return links;
         } else {
-            throw new RuntimeException();
+            throw new RuntimeException("Could not authenticate user for statistics");
+
         }
     }
 
